@@ -1,0 +1,15 @@
+<svg class="hero-animation" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00b3b3" />
+      <stop offset="100%" stop-color="#008080" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#gradient)" d="M0,0 L1920,0 L1920,1080 L0,1080 L0,0 Z M0,1080 C480,720 960,360 1440,720 C1920,1080 1920,1080 1920,1080 L0,1080 Z" />
+  <animateTransform attributeName="transform"
+                    type="translate"
+                    from="-960 0"
+                    to="960 0"
+                    dur="20s"
+                    repeatCount="indefinite" />
+</svg>

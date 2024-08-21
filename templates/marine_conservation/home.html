@@ -1,0 +1,82 @@
+{% extends 'marine_conservation/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Welcome to Ripple Effect</h1>
+    <p class="hero-description">Explore and protect our marine ecosystems.</p>
+    <a href="#about" class="cta-button scroll-down">Discover Protected Areas</a>
+  </div>
+</div>
+
+<div class="about-section" id="about">
+  <div class="about-content">
+    <h2 class="section-title">About Our Mission</h2>
+    <p>At Ripple Effect, we're passionate about preserving and protecting our precious marine ecosystems...</p>
+    <p>Through education, research, and advocacy, we work to ensure that our oceans remain vibrant and full of life for future generations. Join us in our mission to make a lasting impact on marine conservation efforts worldwide.</p>
+  </div>
+  <div class="about-image">
+    <img src="{% static 'images/turtlehero.jpg' %}" alt="Marine Conservation">
+  </div>
+</div>
+
+<div class="testimonials-section">
+  <h2 class="section-title">What People Are Saying</h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"Ripple Effect has opened my eyes to the beauty and importance of our oceans. I've learned so much about marine conservation and how I can help!"</p>
+      <h4>- Sarah K.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"An incredible resource for anyone interested in protecting our oceans. The team at Ripple Effect is doing amazing work."</p>
+      <h4>- John D.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I've been inspired to get involved in marine conservation thanks to Ripple Effect. Highly recommend to anyone looking to make a difference!"</p>
+      <h4>- Emily R.</h4>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section" id="contact">
+  <h2 class="section-title">Get in Touch</h2>
+  <p>We'd love to hear from you! Whether you have questions about our work, want to get involved, or just want to say hello, feel free to reach out.</p>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="contact-button">Send Message</button>
+  </form>
+</div>
+
+<div class="features-section" id="features">
+  <h2>Explore Our Features</h2>
+  <div class="feature-cards">
+      <div class="feature-card">
+          <div class="feature-icon">
+              <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3 class="feature-title">Protected Areas</h3>
+          <p>Discover and learn about marine protected areas worldwide.</p>
+          <a href="#" class="feature-link">Explore</a>
+      </div>
+      <div class="feature-card">
+          <div class="feature-icon">
+              <i class="fas fa-paw"></i>
+          </div>
+          <h3 class="feature-title">Endangered Species</h3>
+          <p>Stay informed about marine species needing protection.</p>
+          <a href="#" class="feature-link">Explore</a>
+      </div>
+      <div class="feature-card">
+          <div class="feature-icon">
+              <i class="fas fa-user-plus"></i>
+          </div>
+          <h3 class="feature-title">Get Involved</h3>
+          <p>Learn how you can contribute to marine conservation efforts.</p>
+          <a href="#" class="feature-link">Explore</a>
+      </div>
+  </div>
+</div>
+{% endblock %}

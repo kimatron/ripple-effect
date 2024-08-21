@@ -1,5 +1,5 @@
-# ripple-effect
-A web application that raises awareness about marine conservation efforts and provides resources for individuals to get involved
+![Logo](static/images/rippleeffect.png)
+
 
 # Ripple Effect
 
@@ -71,8 +71,9 @@ Represents a conservation initiative with the following fields:
      5 **Run in the development server** :
     ```bash
     python manage.py runserver
-e
+
     ```
+
     Access the application at http://127.0.0.1:8000/.
 
 

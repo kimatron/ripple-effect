@@ -3,7 +3,7 @@ from .models import MarineProtectedArea, EndangeredSpecies, ConservationInitiati
 
 
 def home(request):
-    return render(request, 'marine_conservation/base.html')
+    return render(request, 'marine_conservation/home.html')
 
 
 def protected_areas(request):
