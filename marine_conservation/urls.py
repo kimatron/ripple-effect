@@ -16,4 +16,5 @@ urlpatterns = [
     path('conservation-initiatives/<int:pk>/',
          views.conservation_initiative_detail, name='conservation_initiative_detail'),
     path('get-involved/', views.get_involved, name='get_involved'),
+    path('team/', views.team, name='team'),
 ]

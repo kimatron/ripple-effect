@@ -45,3 +45,7 @@ def conservation_initiative_detail(request, pk):
 def get_involved(request):
     # Add your logic to render the "Get Involved" page
     return render(request, 'marine_conservation/get_involved.html')
+
+
+def team(request):
+    return render(request, 'marine_conservation/team.html')

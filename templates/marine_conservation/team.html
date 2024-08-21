@@ -1,0 +1,51 @@
+{% extends 'marine_conservation/base.html' %}
+
+{% load static %} 
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/team.css' %}">
+<section>
+  <span>meet our</span>
+  <h2>Team</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, praesentium veritatis voluptatibus ut consequuntur quas consequatur omnis id rem obcaecati.</p>
+  <span class="bg-watermark">team</span>
+  <div class="cards">
+    <!-- Team Member Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Franklin Carlson">
+      <div class="card-content">
+        <h3>Johnny Holmes</h3>
+        <p>Research Scientist</p>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Team Member Card 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Antonia Moore">
+      <div class="card-content">
+        <h3>Kim Hanlon</h3>
+        <p>Web Developer</p>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Team Member Card 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Travis Lynch">
+      <div class="card-content">
+        <h3>Travis Lynch</h3>
+        <p>Marine Biologist</p>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
