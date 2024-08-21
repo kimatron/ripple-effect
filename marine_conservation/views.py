@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import MarineProtectedArea, EndangeredSpecies, ConservationInitiative
 
 
 def home(request):
@@ -6,18 +7,39 @@ def home(request):
 
 
 def protected_areas(request):
-    # Add your logic to render the protected areas page
-    return render(request, 'marine_conservation/protected_areas.html')
+    protected_areas = MarineProtectedArea.objects.all()
+    context = {'protected_areas': protected_areas}
+    return render(request, 'marine_conservation/protected_areas.html', context)
+
+
+def protected_area_detail(request, pk):
+    protected_area = MarineProtectedArea.objects.get(pk=pk)
+    context = {'protected_area': protected_area}
+    return render(request, 'marine_conservation/protected_area_detail.html', context)
 
 
 def endangered_species(request):
-    # Add your logic to render the endangered species page
-    return render(request, 'marine_conservation/endangered_species.html')
+    endangered_species = EndangeredSpecies.objects.all()
+    context = {'endangered_species': endangered_species}
+    return render(request, 'marine_conservation/endangered_species.html', context)
+
+
+def endangered_species_detail(request, pk):
+    endangered_species = EndangeredSpecies.objects.get(pk=pk)
+    context = {'endangered_species': endangered_species}
+    return render(request, 'marine_conservation/endangered_species_detail.html', context)
 
 
 def conservation_initiatives(request):
-    # Add your logic to render the conservation initiatives page
-    return render(request, 'marine_conservation/conservation_initiatives.html')
+    conservation_initiatives = ConservationInitiative.objects.all()
+    context = {'conservation_initiatives': conservation_initiatives}
+    return render(request, 'marine_conservation/conservation_initiatives.html', context)
+
+
+def conservation_initiative_detail(request, pk):
+    conservation_initiative = ConservationInitiative.objects.get(pk=pk)
+    context = {'conservation_initiative': conservation_initiative}
+    return render(request, 'marine_conservation/conservation_initiative_detail.html', context)
 
 
 def get_involved(request):
