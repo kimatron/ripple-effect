@@ -1,6 +1,8 @@
+from django.conf import settings
 from django.urls import path
 from django.contrib import admin
 from . import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -17,4 +19,4 @@ urlpatterns = [
          views.conservation_initiative_detail, name='conservation_initiative_detail'),
     path('get-involved/', views.get_involved, name='get_involved'),
     path('team/', views.team, name='team'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

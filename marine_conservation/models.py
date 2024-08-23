@@ -14,7 +14,7 @@ class MarineProtectedArea(models.Model):
     description = models.TextField()  # Detailed information about the area
     # Image for visual representation
     image = models.ImageField(
-        upload_to='protected_areas', null=True, blank=True)
+        upload_to='protected_areas/', null=True, blank=True)
 
     def __str__(self):
         return self.name  # This returns the name of the protected area when the object is printed
