@@ -7,8 +7,14 @@ def home(request):
 
 
 def protected_areas(request):
-    protected_areas = MarineProtectedArea.objects.all()
-    context = {'protected_areas': protected_areas}
+    ecosystem_type = request.GET.get('ecosystem_type')
+    if ecosystem_type:
+        protected_areas = MarineProtectedArea.objects.filter(
+            ecosystem_type=ecosystem_type)
+    else:
+        protected_areas = MarineProtectedArea.objects.all()
+    context = {'protected_areas': protected_areas,
+               'ecosystem_type': ecosystem_type}
     return render(request, 'marine_conservation/protected_areas.html', context)
 
 

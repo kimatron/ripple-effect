@@ -1,0 +1,20 @@
+<!-- protected_area_detail.html -->
+{% extends 'marine_conservation/base.html' %}
+
+{% block content %}
+<div class="protected-area-detail">
+    <h1>{{ protected_area.name }}</h1>
+    <p><strong>Location:</strong> {{ protected_area.location }}</p>
+    <p><strong>Ecosystem Type:</strong> {{ protected_area.ecosystem_type }}</p>
+    <p><strong>Status:</strong> {{ protected_area.conservation_status }}</p>
+    
+    {% if protected_area.image %}
+        <img src="{{ protected_area.image.url }}" alt="{{ protected_area.name }}">
+    {% endif %}
+    
+    <p>{{ protected_area.description }}</p>
+    
+    <a href="{% url 'protected_areas' %}" class="btn">Back to Protected Areas</a>
+</div>
+
+{% endblock %}

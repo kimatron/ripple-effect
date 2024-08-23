@@ -1,0 +1,36 @@
+{% extends 'marine_conservation/base.html' %}
+
+{% block content %}
+<div class="protected-areas">
+    <h1>Marine Protected Areas</h1>
+    <div class="dropdown-container">
+        <form method="GET" action="">
+            <select name="ecosystem_type" class="dropdown-select" onchange="this.form.submit()">
+                <option value="">All Ecosystem Types</option>
+                <option value="Coral Reef" {% if ecosystem_type == 'Coral Reef' %}selected{% endif %}>Coral Reef</option>
+                <option value="Mangrove" {% if ecosystem_type == 'Mangrove' %}selected{% endif %}>Mangrove</option>
+                <option value="Seagrass" {% if ecosystem_type == 'Seagrass' %}selected{% endif %}>Seagrass</option>
+                <!-- Add more ecosystem types as needed -->
+            </select>
+        </form>
+    </div>
+
+    <div class="areas-list">
+        {% for area in protected_areas %}
+            <div class="area-item">
+                <h2><a href="{% url 'protected_area_detail' area.pk %}">{{ area.name }}</a></h2>
+                <p><strong>Location:</strong> {{ area.location }}</p>
+                <p><strong>Ecosystem Type:</strong> {{ area.ecosystem_type }}</p>
+                <p><strong>Status:</strong> {{ area.conservation_status }}</p>
+                {% if area.image %}
+                    <img src="{{ area.image.url }}" alt="{{ area.name }}">
+                {% endif %}
+                <p>{{ area.description|truncatewords:20 }}</p>
+                <a href="{% url 'protected_area_detail' area.pk %}" class="btn">Read More</a>
+            </div>
+        {% empty %}
+            <p>No marine protected areas available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

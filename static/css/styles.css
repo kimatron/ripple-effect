@@ -518,6 +518,97 @@ body {
   }
 }
 
+/* protected_areas.css */
+.protected-areas {
+  padding: 20px;
+}
+
+.areas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.area-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.area-item h2 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.area-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.protected-area-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Style for the dropdown container */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown select element */
+.dropdown-select {
+  background-color: #006666;
+  /* Blue background color */
+  color: white;
+  /* White text color */
+  border: 1px solid #008080;
+  /* Blue border */
+  padding: 10px 15px;
+  /* Padding inside the select box */
+  font-size: 16px;
+  /* Font size */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  width: 100%;
+  /* Full width */
+  box-sizing: border-box;
+  /* Include padding in width */
+}
+
+/* Style for the dropdown options */
+.dropdown-select option {
+  background-color: #f1f1f1;
+  /* Light gray background for options */
+  color: black;
+  /* Black text color */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Style for the dropdown select on hover */
+.dropdown-select:hover {
+  background-color: #006666;
+  /* Darker blue on hover */
+  border-color: #00ffff;
+  /* Darker blue border on hover */
+}
+
+/* Style for the dropdown select when focused */
+.dropdown-select:focus {
+  outline: none;
+  /* Remove default outline */
+  box-shadow: 0 0 5px rgba(87, 185, 196, 0.5);
+  /* Blue shadow on focus */
+}
+
+
 /* Footer styles */
 footer {
   background-color: #006666;
