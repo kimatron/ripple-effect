@@ -14,19 +14,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="{% url 'home' %}">Ripple Effect</a>
+  <header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="{% url 'home' %}" class="navbar-logo">Ripple Effect</a>
+            <div class="menu-icon" id="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <ul>
-                <li><a href="{% url 'protected_areas' %}">Protected Areas</a></li>
-                <li><a href="{% url 'endangered_species' %}">Endangered Species</a></li>
-                <li><a href="{% url 'conservation_initiatives' %}">Conservation</a></li>
-                <li><a href="{% url 'get_involved' %}">Get Involved</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="{% url 'protected_areas' %}" class="nav-link">Protected Areas</a></li>
+                <li class="nav-item"><a href="{% url 'endangered_species' %}" class="nav-link">Endangered Species</a></li>
+                <li class="nav-item"><a href="{% url 'conservation_initiatives' %}" class="nav-link">Conservation</a></li>
+                <li class="nav-item"><a href="{% url 'get_involved' %}" class="nav-link">Get Involved</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <main>
         {% block content %}
@@ -34,23 +39,39 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-          <p>&copy; 2024 Ripple Effect. All rights reserved.</p>
-          <div class="social-icons">
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+      <div class="footer-content">
+          {% comment %} <div class="footer-logo">
+              <img src="{% static 'images/rippleeffect.png' %}" alt="Ripple Effect Logo">
+          </div> {% endcomment %}
+          <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'protected_areas' %}">Protected Areas</a></li>
+                  <li><a href="{% url 'endangered_species' %}">Endangered Species</a></li>
+                  <li><a href="{% url 'conservation_initiatives' %}">Conservation</a></li>
+                  <li><a href="{% url 'get_involved' %}">Get Involved</a></li>
+              </ul>
           </div>
-        </div>
-      </footer>
+          <div class="footer-contact">
+              <h3>Contact Us</h3>
+              <p>Email: info@rippleeffect.org</p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Address: 123 Ocean Ave, Marine City, MC 12345</p>
+          </div>
+          <div class="footer-social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Ripple Effect. All rights reserved.</p>
+      </div>
+  </footer>
 </body>
 </html>
